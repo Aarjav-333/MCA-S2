@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Complex {
     int real;
     int imag;
@@ -16,10 +18,33 @@ public class Complex {
     }
 
     public static void main(String[] args) {
-        Complex c1 = new Complex(3, 4);
-        Complex c2 = new Complex(5, 6);
+       
 
-        Complex sum = c1.add(c2);
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the real part of C1");
+        int r1 = sc.nextInt();
+        System.out.println("Enter the imaginary part of C1");
+        int c1 = sc.nextInt();
+
+
+        System.out.println("Enter the real part of C2");
+        int r2 = sc.nextInt();
+        System.out.println("Enter the imaginary part of C2");
+        int c2 = sc.nextInt();
+
+
+
+         Complex a = new Complex(r1,c1);
+        Complex b = new Complex(r2, c2);
+
+
+
+        Complex sum = a.add(b);
         sum.display();
+
+        sc.close();
+
     }
 }
