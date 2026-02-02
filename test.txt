@@ -1,0 +1,1 @@
+create a class named cpu with attrib price. Create an inner class processor (no. of cores, manufacturer, ) and static nested calss ram(memory, manufacturer), create an object of cpu and print info of processor and ram then no. of cores, manu -> var, static class ram 
