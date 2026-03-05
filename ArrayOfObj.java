@@ -1,5 +1,5 @@
 
-public class ArrayOfObj {
+ class ArrayOfObj {
     public static void main(String[] args) {
 
         Student[] students = {
