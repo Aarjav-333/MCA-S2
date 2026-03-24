@@ -1,4 +1,5 @@
 // import java.util.*;
+import java.io.*;
 class Abhay {
     int id = 10;
     String name = "Abhay kaaarr";
@@ -10,7 +11,7 @@ class Abhay {
 // 
 
 public class karthika extends Abhay{
-    public static void main(String args[]){
+    public static void main(String args[]) throws IOException{
          System.out.println("Hello World");
        
     }
