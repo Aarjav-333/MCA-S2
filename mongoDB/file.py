@@ -6,8 +6,8 @@ db = conn["test"]
 col = db["Marks"]
 data = {"Roll_No": 2,"Name":"Aarjav", "Age": 22}
 x = col.insert_one(data)
-if(x):
-    print("inserted")
+if x.inserted_id:
+    print("Inserted")
 else:
     print("Error")
     
