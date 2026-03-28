@@ -19,7 +19,7 @@ class Stack<T> {
     private int top;
     private int capacity;
 
-    // Constructor
+    // Constructor (To avoid - type casting issue hasn't been fully verified by the compiler error )
     @SuppressWarnings("unchecked")
     Stack(int size) {
         capacity = size;
