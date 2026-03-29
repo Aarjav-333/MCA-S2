@@ -22,7 +22,13 @@ for s in students:
 # print("Records inserted with total marks")
 
 
-
+# col.aggregate([
+#     {
+#         "$addFields":{
+#             "total": {"$add": ["$mark1", "$mark2", "$mark3"]}
+#         }
+#     }
+# ])
 
 
 # for doc in col.find({}, {"_id": 0}):
