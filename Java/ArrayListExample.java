@@ -9,6 +9,37 @@ import java.util.*;
         list.add("Banana");
         list.add("Mango");
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
         System.out.println("List: " + list);
 
         System.out.println("First element: " + list.get(0));
