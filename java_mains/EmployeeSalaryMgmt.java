@@ -99,6 +99,7 @@ public class EmployeeSalaryMgmt {
 
                 default : 
                 System.out.println("Invalid option");
+                
                 break;
         }
         } while(n);
