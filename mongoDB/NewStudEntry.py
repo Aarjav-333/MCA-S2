@@ -15,7 +15,7 @@ students = [
 ]
 
 for s in students:
-    s["total"] = s["mark1"] + s["mark2"] + s["mark3"]
+    s["total"] = sum([s["mark1"], s["mark2"], s["mark3"]])
 
 # # col.insert_many(students)
 

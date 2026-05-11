@@ -3,7 +3,7 @@ class ThreadExample {
         MyThread t1 = new MyThread(); 
         t1.start(); 
 
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 500; i++) {
             System.out.println("Main thread: " + i);
         }
     }
@@ -13,8 +13,8 @@ class ThreadExample {
 
 class MyThread extends Thread {
     public void run() {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Thread running: " + i);
+        for (int i = 1; i <= 500; i++) {
+            System.out.printf("Thread running: %d", i);
         }
     }
 }

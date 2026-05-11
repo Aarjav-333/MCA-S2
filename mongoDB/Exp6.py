@@ -119,3 +119,46 @@ for x in col.find(
     
 print()
 
+for s in col.find(
+    {"gender": "male", "course": "MCA"}, 
+    {"_id": 0, "name.fname": 1, "name.lname": 1, "mark": 1}
+):
+    print(s)
+
+
+for s in col.find(
+    {"grade": {"$in" : ["A", "A+"]}},
+    {"_id": 0}
+):
+    print(s)
+
+
+for s in col.find(
+    {"name.fname" : {"regex" : "^A"}},
+    {"_id": 0, "name.fname": 1, "mark": 1}
+):
+    print(s)
+    
+    
+
+for s in col.find(
+    {"mark" : {"$gte": 70, "$lte": 90}},
+    {"_id": 0}
+):
+    print(s)
+    
+
+for s in col.find(
+    {"place" : {"$nin":["Kollam"]}},
+    {"_id": 0,}
+):
+    print(s)
+
+
+
+
+for s in col.find(
+    {"phone.no":{"$exists" : True}},
+    {"_id" : 0}
+):
+    print(s)
