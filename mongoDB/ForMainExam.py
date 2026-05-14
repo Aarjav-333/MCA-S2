@@ -285,6 +285,224 @@ one_student = {
 
 # for i in col.find(
 #     {},
+#     {"_id":0, "name.first_name":1, "total":1}
+# ).sort("total", -1).limit(1):
+#     pprint(i)
+
+
+# for i in col.find(
+#     {},
+#     {"_id":0, "name.first_name":1, "total":1},
+#     sort = [("total", 1)]
+# ).limit(1):
+#     pprint(i)
+
+
+# for i in col.find(
+#     {"course" : "MCA"},
+#     {"_id":0, "name.first_name":1, "total":1, "course" : 1}
+# ).sort("total", -1).limit(3):
+#     pprint(f"{i.get('name', {}).get('first_name')}, {i.get('total')}, {i.get('course')}")
+
+
+# for i in col.find(
+#     {"course" : "Mechanical"},
+#     {"_id":0, "name.first_name":1, "total":1, "course" : 1},
+#     sort = [("total", -1)]
+# ).skip(3).limit(1):
+#     pprint(i)
+
+
+# for i in col.find(
+#     {},
+#     {"_id": 0, "name.first_name": 1},
+#     sort = [("name.first_name", 1)]
+#     ): print(i)
+
+
+
+
+# for i in col.find(
+#     {},
+#     {"_id": 0, "course": 1, "total" : 1},
+#     sort = [("course", 1), ("total", -1)]
+#     ): print(i)
+
+
+
+
+# col.delete_one(
+#     {
+#     "name.first_name" : "Arun"    
+#     }
+# )
+
+# col.delete_many(
+#     {
+#         "mark1" : {"$lt" : 50}
+#     }
+# )
+
+
+# col.delete_many(
+#     {
+#         "course" : "Mechanical"
+#     }
+# )
+
+# col.delete_many(
+#     {
+#         "grade" : "F"
+#     }
+# )
+
+# col.delete_many({})
+
+
+
+# for i in col.aggregate(
+#     [
+#         {
+#             "$group" : {
+#                 "_id" : None,
+#                 "average_mark" : {"$avg" : "$total"}
+#             }
+#         }
+#     ]
+# ):
+#     pprint(f"{i['average_mark']:.3f}")
+
+
+
+# for i in col.aggregate(
+#     [
+#         {
+#             "$group" : {
+#                 "_id" : "$course",
+#                 "average_mark" : {"$avg" : "$total"}
+#             }
+#         }
+#     ]
+# ):
+#     pprint(f"{i['_id']} => {i['average_mark']:.3f}")
+    # pprint(i)
+
+
+
+# for i in col.aggregate(
+#     [
+#         {
+#             "$group" : {
+#                 "_id" : "$course",
+#                 "no_of_students" : {"$sum" : 1},
+#             }
+#         }
+#     ]
+# ):
+#     pprint(f"{i['_id']} => {i['no_of_students']}")
+
+
+
+
+# for i in col.aggregate(
+#     [
+#         {
+#             "$group" : {
+#                 "_id" : "$course",
+#                 "highest_mark" : {"$max" : "$total"},
+#             }
+#         }
+#     ]
+# ):
+#     pprint(f"{i['_id']} => {i['highest_mark']}")
+
+
+
+# for i in col.aggregate(
+#     [
+        
+#     {
+#         "$match" : {
+#             "gender" : "female"
+#         }    
+#     },
+#     {
+#         "$count" : "no_of_female"
+#     }
+        
+#     ]
+# ):
+#     pprint(i)
+
+
+
+# for i in col.aggregate(
+#    [
+#        {
+#            "$group" : {
+#                "_id" : "$gender",
+#                "total_count" : {"$sum" : 1}
+#            }
+#        }
+#    ] 
+# ): 
+#     pprint(i)
+
+# for i in col.aggregate(
+#     [
+#         {
+#             "$match" : {
+#                 "total" : {"$gt" : 250}
+#             }
+#         },
+#         {"$project":{
+#             "_id": 0,
+#             "name.first_name": 1,
+#             "total": 1
+#         }}
+#     ]
+# ):
+#     pprint(i)
+
+# for i in col.aggregate(
+#     [
+#        {
+#            "$sort" : {
+#                "total" : -1
+#                }
+#         },
+#        {
+#            "$project" : {
+#                "_id" : 0,
+#                "name.first_name" : 1, 
+#                "total" : 1
+#            }
+#        }
+#     ]
+# ):
+#     pprint(i)
+
+
+
+    
+# for i in col.find(
+#     {},
 #     {"_id": 0}
 # ):
 #     pprint(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
